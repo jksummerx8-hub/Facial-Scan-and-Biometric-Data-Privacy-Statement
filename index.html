@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenith - Privacy & Facial Technology Disclosure</title>
+    <title>Zenith - 隱私聲明與臉部技術說明</title>
     <style>
         :root {
             --bg-color: #0a0f18;
@@ -16,10 +16,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background: radial-gradient(circle at top center, #1b263b 0%, #0a0f18 100%);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
             display: flex;
@@ -50,7 +50,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             width: 90%;
             margin: 40px auto;
         }
@@ -67,82 +67,104 @@
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s;
-            border-bottom: 1px solid transparent;
         }
 
         nav a:hover {
             color: var(--accent-color);
-            border-bottom: 1px solid var(--accent-color);
         }
 
         section {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 24px;
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
 
         h2 {
             color: var(--accent-color);
             font-weight: 400;
-            border-left: 3px solid var(--highlight);
-            padding-left: 15px;
-            margin-bottom: 30px;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--highlight);
+            padding-left: 20px;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
         }
 
         h3 {
             color: var(--highlight);
-            font-size: 1.2rem;
-            margin-top: 30px;
+            font-size: 1.3rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
         }
 
-        .language-block {
-            margin-top: 60px;
+        .language-divider {
+            margin: 80px 0;
             border-top: 1px dashed var(--border-color);
-            padding-top: 60px;
+            position: relative;
         }
 
-        .disclaimer {
-            font-size: 0.85rem;
+        .language-divider::after {
+            content: "ENGLISH VERSION BELOW";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #111b2d;
+            padding: 0 20px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+        }
+
+        .disclaimer-box {
+            font-size: 0.9rem;
             color: #ffb703;
-            background: rgba(255, 183, 3, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
+            background: rgba(255, 183, 3, 0.08);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 183, 3, 0.2);
+            margin-top: 30px;
         }
 
         .badge {
             display: inline-block;
             background: var(--highlight);
             color: white;
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-size: 0.7rem;
+            padding: 3px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
             vertical-align: middle;
-            margin-left: 10px;
+            margin-left: 12px;
             text-transform: uppercase;
+            font-weight: bold;
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 25px;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: #fff;
         }
 
         footer {
-            padding: 40px;
+            padding: 60px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
+            letter-spacing: 1px;
         }
 
         @media (max-width: 600px) {
-            section { padding: 25px; }
+            section { padding: 30px 20px; }
             .logo { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -151,36 +173,36 @@
 <header>
     <h1 class="logo">Zenith</h1>
     <nav>
-        <a href="#zh">中文 (Traditional)</a>
+        <a href="#zh">中文版</a>
+        <span>|</span>
         <a href="#en">English</a>
     </nav>
 </header>
 
 <div class="container">
-    <!-- Traditional Chinese Version -->
-    <div id="zh">
+    <article id="zh">
         <section>
             <h2>臉部技術使用說明 <span class="badge">TrueDepth API</span></h2>
             <p>當您使用「察覺 (Aware)」功能時，我們對您的數據處理承諾如下：</p>
 
             <h3>1. 我們收集什麼資料？</h3>
             <p>當您開啟「察覺」功能，Zenith 會透過您裝置上的 <strong>TrueDepth 前置相機系統</strong> 捕捉細微的面部表情（Blend Shapes）與頭部動作。</p>
-            <p><em>注意：我們僅讀取數學運算所需的「特徵點數據」，絕不會拍攝、錄製或儲存您的照片或影片。</em></p>
+            <p><strong>注意：</strong> 我們僅讀取數學運算所需的「特徵點數據」，絕不會拍攝、錄製或儲存您的照片或影片。</p>
 
             <h3>2. 這些資料用在哪裡？</h3>
             <p>這些數據僅用於即時計算您的「心能量」與「當下狀態」。透過分析面部肌肉的細微變化，App 能協助您更深層地了解自己的情緒起伏與疲勞程度，達成更好的靜心效果。</p>
 
             <h3>3. 資料會被存儲或分享嗎？</h3>
             <ul>
-                <li><strong>完全在本地處理：</strong> 所有的運算都在您的 iPhone 或 iPad 晶片中即時完成。</li>
-                <li><strong>不儲存、不外流：</strong> 資料在運算結束後會立即銷毀。我們不會將您的臉部數據上傳至任何雲端伺服器，也不會與任何第三方（如廣告商或分析機構）分享。</li>
-                <li><strong>離線驗證：</strong> 您可以在完全斷開網路（開啟飛航模式）的情況下使用此功能，這證明了數據完全不需要離開您的裝置。</li>
+                <li><strong>100% 本地處理：</strong> 所有的運算都在您的 iPhone 或 iPad 晶片中即時完成。</li>
+                <li><strong>不儲存、不外流：</strong> 資料在運算結束後會立即銷毀。我們不會將您的臉部數據上傳至任何雲端伺服器，也不會與任何第三方分享。</li>
+                <li><strong>離線驗證：</strong> 您可以在開啟「飛航模式」的情況下使用此功能，證明數據完全不需要離開您的裝置。</li>
             </ul>
 
             <h3>4. 您擁有完全的控制權</h3>
-            <p>您可以隨時在 iOS 的「設定」>「隱私權與安全性」>「相機」中撤回對 Zenith 的存取授權。若不開啟此權限，您仍可使用 Zenith 的其他冥想與音效功能。</p>
+            <p>您可以隨時在 iOS 的「設定」>「隱私權與安全性」>「相機」中撤回授權。若不開啟此權限，您仍可使用 Zenith 的其他所有功能。</p>
 
-            <div class="disclaimer">
+            <div class="disclaimer-box">
                 <strong>5. 非醫療免責聲明</strong><br>
                 「察覺」功能所提供的數據僅供個人成長與靜心參考，不具備任何醫療診斷、預防或治療建議之效力。若您有健康方面的疑慮，請務必諮詢專業醫療人員。
             </div>
@@ -188,63 +210,61 @@
 
         <section>
             <h2>隱私聲明 <span class="badge">Privacy Policy</span></h2>
-            <p>為了保障您的帳戶安全並提供更便捷的體驗，本服務提供臉部辨識功能。在使用此功能前，請詳細閱讀以下承諾：</p>
+            <p>為了保障您的帳戶安全並提供更便捷的體驗，Zenith 提供臉部辨識功能。以下是我們的隱私保護承諾：</p>
 
             <h3>1. 權限啟動與請求</h3>
-            <p>當您主動啟動功能時，系統會先行跳出視窗請求存取您的相機權限。未經您的操作與授權，本程式不會擅自開啟相機或進行任何掃描行為。</p>
+            <p>系統僅在您主動觸發功能時請求存取授權。未經操作，本程式不會擅自開啟相機或進行任何掃描。</p>
 
-            <h3>2. 100% 裝置端本地處理</h3>
-            <p>您的臉部辨識過程完全在您的個人行動裝置（On-Device）硬體中完成。所有的運算數據均不會上傳至我們的伺服器，確保生物辨識資訊不離開您的裝置。</p>
+            <h3>2. 物理隔離運算</h3>
+            <p>您的臉部辨識過程完全在個人裝置的硬體中完成。所有數據均不會上傳至伺服器或第三方雲端平台。</p>
 
             <h3>3. 不儲存原始影像</h3>
-            <p>系統不會儲存您的原始臉部照片或錄影檔案。掃描時會立即將臉部特徵轉換為一段加密的數學代碼（特徵向量），僅用於即時比對，且該代碼無法還原為原始人臉圖像。</p>
+            <p>系統不儲存原始照片或錄影。掃描時會立即轉換為加密的數學特徵碼，且該代碼無法還原為人臉圖像。</p>
 
-            <h3>4. 數據安全與刪除</h3>
-            <p>辨識數據儲存於裝置的<strong>安全隔區（Secure Enclave）</strong>中，與作業系統其他部分隔離。當您關閉功能或卸載本程式時，相關特徵數據將同步被永久刪除。</p>
+            <h3>4. 安全隔區保護</h3>
+            <p>辨識數據儲存於裝置的 <strong>安全隔區 (Secure Enclave)</strong> 中，與作業系統其他部分隔離。當您卸載 App 時，相關數據將同步被永久刪除。</p>
         </section>
-    </div>
+    </article>
 
-    <!-- English Version -->
-    <div id="en" class="language-block">
+    <div class="language-divider"></div>
+
+    <article id="en">
         <section>
-            <h2>Facial Technology User Guide <span class="badge">TrueDepth API</span></h2>
-            <p>When you use the "Aware" feature, our commitment to your data is as follows:</p>
+            <h2>Facial Technology Disclosure <span class="badge">TrueDepth API</span></h2>
+            <p>When using the "Aware" feature, Zenith adheres to the following privacy standards:</p>
 
-            <h3>1. What data do we collect?</h3>
-            <p>Zenith captures subtle facial expressions (Blend Shapes) and head movements using the <strong>TrueDepth camera system</strong>.</p>
-            <p><em>Note: We only process mathematical "feature point data." We never record, photograph, or store your actual image or video.</em></p>
+            <h3>1. Data Collection</h3>
+            <p>Zenith utilizes the <strong>TrueDepth camera system</strong> to capture facial blend shapes and head movements.</p>
+            <p><strong>Note:</strong> We only process mathematical feature point data. We never record, photograph, or store your physical image.</p>
 
-            <h3>2. How is this data used?</h3>
-            <p>This data is used solely for real-time calculation of your "Mind Energy" and "Current State" to help you understand emotional fluctuations and fatigue during meditation.</p>
+            <h3>2. Purpose of Use</h3>
+            <p>Data is used solely for real-time calculation of your "Mind Energy" and "Presence," helping you monitor emotional fluctuations and stress during meditation sessions.</p>
 
             <h3>3. Storage and Sharing</h3>
             <ul>
-                <li><strong>100% On-Device:</strong> All processing happens in real-time on your iPhone/iPad chip.</li>
-                <li><strong>No Storage:</strong> Data is destroyed immediately after calculation. No data is uploaded to servers or shared with third parties.</li>
-                <li><strong>Offline Verification:</strong> This feature works in Airplane Mode, proving data never leaves your device.</li>
+                <li><strong>Local Processing:</strong> All calculations are performed on-device in real-time.</li>
+                <li><strong>Zero Retention:</strong> Data is discarded immediately after processing. We never upload your facial data to any cloud or share it with third parties.</li>
+                <li><strong>Offline Support:</strong> This feature works entirely without an internet connection.</li>
             </ul>
 
-            <div class="disclaimer">
-                <strong>Non-Medical Disclaimer:</strong> This feature is for personal growth and meditation reference only. It is not for medical diagnosis or treatment.
+            <div class="disclaimer-box">
+                <strong>Non-Medical Disclaimer:</strong> The "Aware" feature is for personal growth and wellness reference only. It does not provide medical diagnosis or treatment advice.
             </div>
         </section>
 
         <section>
-            <h2>Privacy Statement</h2>
-            <h3>On-Device Processing</h3>
-            <p>All facial recognition processes are completed entirely on your personal device hardware. Biometric information never leaves your hands.</p>
+            <h2>Privacy Policy <span class="badge">Biometrics</span></h2>
+            <h3>Hardware-Level Privacy</h3>
+            <p>Your biometric data never leaves your device. All recognition is handled within the <strong>Secure Enclave</strong> of your iPhone/iPad hardware.</p>
 
             <h3>No Image Storage</h3>
-            <p>We do not store original photos or videos. Features are converted into encrypted mathematical codes (feature vectors) that cannot be reconstructed into images.</p>
-
-            <h3>Hardware Security</h3>
-            <p>Data is stored in the <strong>Secure Enclave</strong>, isolated from the rest of the OS, and is permanently deleted if the app is uninstalled.</p>
+            <p>Zenith does not store original facial photos or videos. Facial features are converted into encrypted mathematical vectors that cannot be reversed back into an image.</p>
         </section>
-    </div>
+    </article>
 </div>
 
 <footer>
-    &copy; 2026 Zenith Wellness. Designed for tranquility and privacy.
+    &copy; 2026 Zenith Wellness. Built with privacy as our core frequency.
 </footer>
 
 </body>
